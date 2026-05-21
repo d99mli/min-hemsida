@@ -1,0 +1,117 @@
+.about-hero {
+  min-height: 80vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 4rem;
+
+  padding: 4rem 2rem;
+
+  flex-wrap: wrap;
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h1 {
+  font-size: 4rem;
+
+  color: #ff69b4;
+
+  font-family: 'Dancing Script', cursive;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+
+  line-height: 1.8;
+}
+
+.about-image {
+  width: 320px;
+
+  height: 420px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 10px 30px rgba(255,182,193,0.4);
+
+  transition: 0.3s;
+}
+
+.about-image:hover {
+  transform: scale(1.03);
+}
+
+.gallery {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  flex-wrap: wrap;
+
+  padding: 2rem;
+}
+
+.gallery img {
+  width: 250px;
+
+  height: 320px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 10px 25px rgba(255,182,193,0.3);
+}
+
+.gallery img:hover {
+  transform:
+    translateY(-10px)
+    scale(1.03);
+}
+
+.facts {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  flex-wrap: wrap;
+
+  padding: 4rem 2rem;
+}
+
+.fact-card {
+  background:
+    rgba(255,255,255,0.6);
+
+  backdrop-filter: blur(10px);
+
+  padding: 1.5rem 2rem;
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 5px 20px rgba(255,182,193,0.3);
+
+  transition: 0.3s;
+}
+
+.fact-card:hover {
+  transform: scale(1.05);
+}
