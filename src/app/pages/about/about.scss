@@ -1,5 +1,5 @@
 .about-hero {
-  min-height: 80vh;
+  min-height: 60vh;
 
   display: flex;
 
@@ -114,4 +114,139 @@
 
 .fact-card:hover {
   transform: scale(1.05);
+}
+
+
+
+.family-hero {
+  min-height: 60vh;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 4rem;
+
+  padding: 4rem 2rem;
+
+  flex-wrap: wrap;
+}
+
+.family-text {
+  max-width: 500px;
+}
+
+.family-text h1 {
+  font-size: 4rem;
+
+  color: #ff69b4;
+
+  font-family: 'Dancing Script', cursive;
+
+  margin-bottom: 1rem;
+}
+
+.family-text p {
+  font-size: 1.2rem;
+
+  line-height: 1.8;
+
+  color: #6d4b5c;
+}
+
+.family-image {
+  width: 350px;
+
+  height: 450px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 0 30px rgba(255,182,193,0.5),
+    0 10px 30px rgba(255,182,193,0.4);
+
+  transition: 0.3s;
+}
+
+.family-image:hover {
+  transform:
+    scale(1.03);
+
+  box-shadow:
+    0 0 50px rgba(255,182,193,0.7),
+    0 15px 40px rgba(255,182,193,0.5);
+}
+.family-gallery {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  flex-wrap: wrap;
+
+  padding: 2rem;
+}
+
+.family-gallery img {
+  width: 250px;
+
+  height: 320px;
+
+  object-fit: cover;
+
+  border-radius: 25px;
+
+  transition: 0.3s;
+
+  box-shadow:
+    0 10px 25px rgba(255,182,193,0.3);
+}
+
+.family-gallery img:hover {
+  transform:
+    translateY(-10px)
+    scale(1.03);
+
+  box-shadow:
+    0 15px 40px rgba(255,182,193,0.5);
+}
+.family-facts {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 1.5rem;
+
+  flex-wrap: wrap;
+
+  padding: 4rem 2rem;
+}
+
+.family-fact {
+  background:
+    rgba(255,255,255,0.6);
+
+  backdrop-filter: blur(10px);
+
+  padding: 1.5rem 2rem;
+
+  border-radius: 999px;
+
+  box-shadow:
+    0 5px 20px rgba(255,182,193,0.3);
+
+  transition: 0.3s;
+}
+
+.family-fact:hover {
+  transform:
+    scale(1.05);
+
+  box-shadow:
+    0 10px 30px rgba(255,182,193,0.5);
 }

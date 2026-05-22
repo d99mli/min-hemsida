@@ -14,20 +14,22 @@ export class App {
 
   @HostListener('document:mousemove', ['$event'])
 
-  onMouseMove(event: MouseEvent) {
+ moveCursor(event: MouseEvent) {
 
-    document.body.style.setProperty(
-      '--x',
-      event.clientX + 'px'
-    );
+  const cursor =
+    document.querySelector(
+      '.custom-cursor'
+    ) as HTMLElement;
 
-    document.body.style.setProperty(
-      '--y',
-      event.clientY + 'px'
-    );
+  cursor.style.left =
+    event.clientX + 'px';
 
-  }
+  cursor.style.top =
+    event.clientY + 'px';
+
 }
+}
+
 
 
 

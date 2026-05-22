@@ -2,7 +2,7 @@
 @import "@fortawesome/fontawesome-free/css/all.min.css";
 body {
   margin: 0;
-
+  min-height: 100%;
   font-family: 'Poppins', sans-serif;
 
   background:
@@ -15,34 +15,20 @@ body {
   color: #5c3b4d;
 
   overflow-x: hidden;
+
+  cursor: none;
 }
 
 * {
   box-sizing: border-box;
-}
-body {
-  margin: 0;
-
-  font-family: 'Poppins', sans-serif;
-
-  background:
-    linear-gradient(
-      to bottom,
-      #fff0f7,
-      #ffe4f2
-    );
-
-  color: #5c3b4d;
-
-  overflow-x: hidden;
+  cursor: none !important;
 }
 
-* {
-  box-sizing: border-box;
-}
 html {
   scroll-behavior: smooth;
+  min-height: 100%;
 }
+
 body::before {
   content: "";
 
@@ -67,11 +53,11 @@ body::before {
     translate(-50%, -50%);
 
   z-index: -1;
+
+  animation:
+  sparkle 4s ease-in-out infinite alternate;
 }
-body {
-  cursor: url('https://cur.cursors-4u.net/cursors/cur-11/cur1054.cur'),
-  auto;
-}
+
 .loader {
   position: fixed;
 
@@ -118,7 +104,6 @@ body {
   to {
     transform: rotate(360deg);
   }
-
 }
 
 @keyframes hideLoader {
@@ -136,8 +121,8 @@ body {
 
     visibility: hidden;
   }
-
 }
+
 @keyframes sparkle {
 
   0% {
@@ -149,16 +134,64 @@ body {
     transform:
       translateY(-20px);
   }
-
 }
 
-body::before {
-  animation:
-    sparkle 4s ease-in-out infinite alternate;
-}
-.progress-bar {
+.hearts span {
   position: fixed;
 
+  bottom: -50px;
+
+  font-size: 2rem;
+
+  animation: float 10s linear infinite;
+
+  opacity: 0.7;
+}
+
+.hearts span:nth-child(1) {
+  left: 10%;
+  animation-duration: 9s;
+}
+
+.hearts span:nth-child(2) {
+  left: 30%;
+  animation-duration: 12s;
+}
+
+.hearts span:nth-child(3) {
+  left: 50%;
+  animation-duration: 10s;
+}
+
+.hearts span:nth-child(4) {
+  left: 70%;
+  animation-duration: 13s;
+}
+
+.hearts span:nth-child(5) {
+  left: 90%;
+  animation-duration: 11s;
+}
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: translateY(-120vh);
+    opacity: 0;
+  }
+}
+
+.progress-bar {
+  position: fixed;
   top: 0;
   left: 0;
 
@@ -180,6 +213,7 @@ body::before {
 
   animation-timeline: scroll();
 }
+
 .floating-socials {
   position: fixed;
 
@@ -230,4 +264,80 @@ body::before {
     scale(1.1);
 
   background: #ffd6ea;
+}
+
+.dark-mode {
+  background:
+    linear-gradient(
+      to bottom,
+      #1e1b2e,
+      #2a2438
+    );
+
+  color: #f8d7e8;
+}
+
+.dark-mode .card,
+.dark-mode .contact-card,
+.dark-mode .fact-card,
+.dark-mode .favorite-card {
+  background:
+    rgba(40,40,50,0.7);
+
+  color: #f8d7e8;
+}
+
+.dark-mode nav {
+  background:
+    rgba(20,20,30,0.7);
+}
+
+.dark-mode .logo,
+.dark-mode h1,
+.dark-mode h2 {
+  color: #ff9ecf;
+}
+
+footer {
+  text-align: center;
+
+  padding: 1rem;
+
+  color: #d45d9e;
+
+  font-size: 1rem;
+}
+
+.custom-cursor {
+  clip-path:
+  path(
+    "M12 21s-6-4.35-9-8.28C-1.5 8.2 1.42 3 6 3c2.54 0 4 2 6 4 2-2 3.46-4 6-4 4.58 0 7.5 5.2 3 9.72C18 16.65 12 21 12 21z"
+  );
+
+  width: 25px;
+
+  height: 25px;
+
+  border-radius: 50%;
+
+  position: fixed;
+
+  pointer-events: none;
+
+  z-index: 99999;
+
+  background:
+    radial-gradient(
+      #ff9ecf,
+      #ff69b4
+    );
+
+  box-shadow:
+    0 0 20px rgba(255,105,180,0.7);
+
+  transform:
+    translate(-50%, -50%);
+
+  transition:
+    transform 0.08s ease;
 }
