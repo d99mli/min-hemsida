@@ -23,7 +23,7 @@
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
-            "outputPath": "dist/d99mli.github.io",
+            "outputPath": "dist/d99mli.github.io/min-hemsida/",
             "assets": [
               {
                 "glob": "**/*",
